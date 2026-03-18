@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>O primeiro ataca, os outros te defendem</title>
+    <title>Array</title>
 </head>
 <body>
+    <h2>Cadastro de nomes</h2>
 
-    <h1>Mini Caça-Níquel - Berserk</h1>
+    <input type="text" id="nome" placeholder="Digite um nome">
+    <button onclick="adicionar()">Cadastrar</button>
+    <button onclick="Mostrar()">Mostrar lista</button>
 
-    <h3>Máquina</h3>
+    <p id="resultado"></p>
 
-    <img src="slot.png" id="img1" width="150">
-    <img src="slot.png" id="img2" width="150">
-    <img src="slot.png" id="img3" width="150">
+    <script>
+        let nomes = []; 
+        function adicionar (){
+            let nome = document.getElementById("").value;
+            if(nome !=""){
+                nomes.push(nome);
+                document.getelementbyid("nome").value ="";
+            }
+        }
 
-    <p>
-        <input type="button" value="GIRAR" onclick="jogar()">
-        <input type="button" value="RESET" onclick="resetar()">
-    </p>
+        function mostrar(){
+            let texto = "Nomes Cadastrados: <br>";
+            for(let i=0; i<nomes.lnght; i++){
+                texto += nomes [i] + "<br>";
 
-    <hr>
+            }
+            document.getelementbyid("resultado").innerHTML = texto;
+        }
 
-    <h3 id="resultado">Resultado</h3>
-
-    <script src="cacaniqueis.js"></script>
+    </script>
 
 </body>
 </html>
