@@ -1,24 +1,32 @@
-//let lista = [10,"kkkkk",true,false,{nome:"Jorge"}];
-//lista[3] = 70;
-//lista.push("EU TO LOCO!!!")
-//lista.shift();
-//console.log(lista);
-
-//let num = [10,20,30,40,50];
-//for(let i = 0; i < num.length; i++){
-//    console.log("Elemento "+num[i]);
-//}
-
 let matrix = [
-    [1,2,3],
-    [4,5,6],
-    [7,8,9]
+    ["Lucas","Ana","Pedro"],
+    ["Maria","João","Carlos"],
+    ["Beatriz","Rafael","Sofia"]
 ]
+//acima alterei meu arreio para o contexto de nome de pacientes.
+
+let texto = "";
+//acima fiz uma caixinha vazia para guardar nomes.
 
 for(let i = 0; i < matrix.length; i++){
     for(let j = 0; j < matrix[i].length; j++)
     {
-        console.log(matrix[i][j]);
+        texto += matrix[i][j] + "<br>";
+// agora guarda tudo dentro do texto ao invez do console, adiciona sem apagar o anterior: +=.
     }
 
+}
+document.getElementById("resultado").innerHTML = texto;
+//Pega um lugar da página no caso o resultado e coloca o conteúdo texto.
+
+function mostrar(){
+    let texto = "";
+
+    for(let i = 0; i < matrix.length; i++){
+        for(let j = 0; j < matrix[i].length; j++){
+            texto += matrix[i][j] + "<br>";
+        }
+    }
+
+    document.getElementById("resultado").innerHTML = texto;
 }
