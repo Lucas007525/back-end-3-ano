@@ -35,6 +35,32 @@ let maiorQue= 18 > 11;
 
 console.log(maiorQue);
 
+// perdi uma aula então vou continuar de onde pararam.
+
+//17. Conte quantos números são maiores que cinco.
+
+let lista = [2, 6, 8, 1, 3];
+
+let count = 0;
+for(let i=0; i<lista.length;i++){
+    if(lista[i]>5)cont++;
+}
+console.log(cont);
+let palavra= "JFRS"
+//18.Percorra a string letra por letra.
+for(let i=0; i<palavra.length; i++){
+    console.log(palavra[i]);
+
+}
+//19. Pare um loop quando encontrar o número 7 de 0 a 10.
+
+for(let i=0; i<10;i++){
+    if(i===7)break;
+        
+    console.log(i);
+
+}
+
 
 
 
