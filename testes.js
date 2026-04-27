@@ -400,7 +400,9 @@ let tenis = {
     tamanho: 42,
     cor: "preto"
 }
-console.log(tenis);
+for(let prop in tenis){
+  console.log(`${prop} : ${teni[prop]}`);
+}
 // 57: Crie um objeto cachorro com nome "Rex" e um método latir que exibe "Au au!"
 function latir(){
     let cachorro = {
