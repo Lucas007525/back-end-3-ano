@@ -1,38 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <title>RPG Combat Simulator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>Cadastro de nomes</h2>
-<input type="text" id="nome" placeholder="Digite um nome">
-<button onclick="adicionar()">Adicionar</button>
-<button onclick="mostrar()">Mostrar Lista</button>
+    <div class="container">
+        <h1>Simulador de Combate</h1>
+        
+        <label>Escolha sua Classe:</label>
+        <select id="classe">
+            <option value="Guerreiro">Guerreiro</option>
+            <option value="Mago">Mago</option>
+            <option value="Arqueiro">Arqueiro</option>
+        </select>
 
-<p id="resultado"></p>
+        <label>Sua Arma:</label>
+        <input type="text" id="arma" placeholder="Ex: Espada, Cajado, Arco...">
 
-<script>
-let nomes =[];
-function adicionar(){
-let nome = document.getElementById("nome").value;
-if(nome !=""){
-nomes.push(nome);
-document.getElementById("nome").value = "";
+        <button onclick="lutar()">Lutar!</button>
 
-}
-}
-function mostrar(){
-let texto = "Nomes Cadastrados: <br>";
-for(let i=0; i<nomes.length; i++){
-texto += nomes[i] + "<br>";
-}
-document.getElementById("resultado").innerHTML = texto;
-}
+        <div id="resultado" class="resultado">
+            O desfecho aparecerá aqui...
+        </div>
+    </div>
 
-
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
