@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="Pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>RPG Combat Simulator</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href="style.css">
+    <title>Document</title> 
+
 </head>
+
 <body>
-    <div class="container">
-        <h1>Simulador de Combate</h1>
-        
-        <label>Escolha sua Classe:</label>
-        <select id="classe">
-            <option value="Guerreiro">Guerreiro</option>
-            <option value="Mago">Mago</option>
-            <option value="Arqueiro">Arqueiro</option>
+    <div class="Arena">
+        <h2>ARENA DE BATALHA</h2>
+        <div class = "controles">
+            <label> Escolha seu herói</label>
+            <select id ="classe">
+            <option value="guerreiro"></option>
+            <option value="mago"></option>
+            <option value="arqueiro"></option>
         </select>
-
-        <label>Sua Arma:</label>
-        <input type="text" id="arma" placeholder="Ex: Espada, Cajado, Arco...">
-
-        <button onclick="lutar()">Lutar!</button>
-
-        <div id="resultado" class="resultado">
-            O desfecho aparecerá aqui...
+        <Label>Equipe sua arma</Label>
+        <input type="text" id="arma" placeholder = "Ex: Espada, cajado e arco">
+        <button onclick = "lutar()">INICIAR COMBATE</button>
         </div>
-    </div>
 
-    <script src="script.js"></script>
+        <div id="log">Aguardando desafiante</div>
+
+
+
+
+
+
+
+    </div>
 </body>
 </html>
