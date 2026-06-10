@@ -22,7 +22,18 @@ valor e o envia para dentro do método, que soma o dinheiro ao saldo atual da co
     <button onclick="executarDeposito()">Depositar</button>
 
     <script>
-        
+        const conta = {
+            saldo:100,
+            depositar: function(valor){
+                this.saldo += valor; 
+            }
+        };
+        function executarDeposito(){
+            let inputValor = number (document.getElementById("valDeposito".value));
+            conta.depositar(inputValor);
+            document.getElementById("txtSaldo").innerText = conta.saldo;
+            
+        }
     </script>
 </body>
 </html>
